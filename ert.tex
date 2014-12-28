@@ -1,0 +1,414 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                                          %%%
+%%% Преамбула документа --- определение параметров страницы  %%%
+%%% без необходимости не изменяйте                           %%%
+%%%                                                          %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{report}
+
+\usepackage{setspace}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{comment} %%%
+%\renewcommand{\baselinestretch}{2}
+
+\usepackage{ccaption}
+% заменяем для рисунков ':' после номера рисунка на '.'
+\captiondelim{. } % после точки стоит пробел!
+%Этот пакет обладает совместимостью с caption2, достаточно указать
+%\usepackage[caption2]{ccaption
+
+%\newenvironment{mylisting}
+%{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\scriptsize\bfseries}
+%{\end{list}}
+%
+%\newenvironment{mytinylisting}
+%{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\tiny\bfseries}
+%{\end{list}}
+%
+\usepackage{listings}
+%
+
+\makeatletter
+
+\renewcommand{\labelenumi}{\theenumi)}
+
+%\pagestyle{myheadings
+\pagestyle{plain}
+
+\makeatletter
+\makeatother
+
+\renewcommand{\labelenumi}{\theenumi)}
+
+%\textheight=25.5cm %%% 25.5
+\textheight=25.5cm
+\topskip=-0.4cm  %%% 1
+\textwidth=15.5cm
+\setlength{\textheight}{245mm}
+%\oddsidemargin=-0.46cm
+\voffset=-20mm
+\hoffset=-10mm
+
+
+\sloppy
+
+\renewcommand{\baselinestretch}{1.1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                       %%%
+%%% Начало тела документа %%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                         %%%
+%%% Начало титульного листа %%%
+
+\thispagestyle{empty}
+\begin{center}
+%\Large
+%Федеральное агентство по образованию\\
+%Правительство Российской Федерации \\
+Федеральное государственное \\
+автономное образовательное учреждение \\
+высшего профессионального образования\\
+
+\Large Национальный исследовательский университет\\
+\Large <<Высшая школа экономики>>\\
+
+
+%\large Отделение программной инженерии\\
+
+\end{center}
+
+\vbox{\vspace{2cm}}
+
+\hangindent=8cm
+\hangafter=-25
+%\noindent Кафедра \\Управления разработкой программного обеспечения
+
+
+\vbox{\vspace{10mm}}\noindent %
+\noindent
+%\hfillФролов Дмитрий Сергеевич\\
+
+
+%\vbox{\vspace{2cm}}
+
+\begin{center}
+\large РЕФЕРАТ \\
+%\large для поступления в аспирантуру по направлению\\
+%\large 09.06.01 - <<Информатика и вычислительная техника>>\\
+\large по истории технических наук\\
+%\large 05.13.17 - <<Теоретические основы информатики>>\\
+
+%(промежуточный) \\ \medskip
+\large на тему:
+%%% Название работы %%%
+
+\huge {\sc
+Понятие вероятности в науке \\
+и ее применение для решения практических задач
+}\\
+
+\vbox{\vspace{6mm}} \noindent
+
+%\large Направление 010400 - Программная инженерия \\
+
+\end{center}
+
+%\vspace{\fill}
+
+\hangindent=8cm
+\hangafter=-25
+%%% Ваши данные (при сдаче отчёта подпишите его, поставив подпись под своей
+%%% фамилией) %%%
+\vbox{\vspace{10mm}}\noindent %
+%\noindent
+Выполнил: аспирант\\
+Д.~С.~Фролов \\
+%%% Ваш руководитель (ставит оценку и расписывается под фамилией) %%%
+%\vbox{\vspace{10mm}}\noindent
+%Научный руководитель: \\
+%профессор, д. т. н\\
+%Б.~Г.~Миркин\\
+\vbox{\vspace{10mm}}\noindent
+%%% Дата представления и общая оценка за отчёт и сроки
+%Представлена ``\rule{0.8cm}{0.4pt}''\rule{2cm}{0.4pt} 2011~г.\\
+%Представлен ``\rule{0.8cm}{0.4pt}''\rule{2cm}{0.4pt} 2012~г.\\
+\vbox{\vspace{10mm}}\noindent
+%Оценка оформления и сроков\\
+%представления курсовой работы:\\
+%Оценка оформления и сроков\\
+%представления:\\
+\vbox{\vspace{10mm}}\noindent
+%Оценка публичной защиты работы:\\
+%Оценка публичной защиты:\\                 %%%%%
+\vbox{\vspace{10mm}}\noindent
+%Оценки промежуточного отчета:\\
+%Оценка научного руководителя:\\            %%%%%
+%Оформление и срок представления:\\         
+%Оценка оформления\\
+%и сроков представления отчета:\\
+\vbox{\vspace{10mm}}\noindent
+%Итоговая оценка:\\                         %%%%%
+\vbox{\vspace{10mm}}\noindent
+%Отв. преподаватель:\\                      %%%%%
+\vspace{\fill}
+
+\begin{center}
+\Large
+Москва --- 2014
+\end{center}
+
+%%% Конец титульного листа  %%%
+%%%                         %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\textheight=24.5cm
+\textheight=23.0cm
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                          %%%
+%%% Содержание               %%%
+
+\newpage
+
+\onehalfspacing 
+
+
+\tableofcontents
+\thispagestyle{empty}
+
+%%% Содержание              %%%
+%%%                         %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                          %%%
+%%% Введение                 %%%
+
+%%% В введении Вы должны описать предметную область, с которой связана %%%
+%%% Ваша работа, показать её актуальность, вкратце определить цель     %%%
+%%% исследования/разработки					       %%%
+
+\newpage
+
+\chapter*{Введение}
+\addcontentsline{toc}{chapter}{Введение}
+
+
+\section{Введение}
+
+С развитием вычислительной техники появились задачи автоматической обработки текстов, созданных человеком и написанных на
+естественном языке. В силу большой разнообразности естественных языков, огромных словарей и сложности языковых конструкций эти проблемы с трудом поддаются решению.
+
+Одним из направлений в обработке естественного языка является работа с множествами текстовых документов. Сюда можно отнести задачи рубрикации документов, задачи поиска документов по ключевым словам, определение степени близости текстов и другие проблемы.
+
+\section{Постановка задачи}
+
+Одним из факторов, влияющих на сложность задач, связанных с обработкой документов на естественном языке, является количество документов, с которыми предстоит работать, так называемый размер коллекции. Но это не всегда и не только значит, что чем крупнее коллекция, тем сложнее с ней работать. Безусловно, размер коллекции влияет на требования к вычислительным ресурсам, однако также надо понимать, что необходимо правильно выбирать алгоритмы для решения той или иной задачи. 
+
+\subsection{Предварительная обработка документов}
+
+
+\section{Выводы}
+
+Эксперименты показали, что использование распределенных алгоритмов существенно сокращает время, затрачиваемое на обработку коллекции. Применение предварительного индексирования коллекции по вспомогательным признакам сокращает время выполнения поискового запроса в методе на основе АСД, однако даже с учетом этой модификации этот метод все же несколько уступает в скорости выполнения запроса методам, основанным на LDA и PLSI. 
+
+При сравнении качества поиска метод на основе АСД показал существенное преимущество на <<пользовательских>> запросах.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{Заключение}
+\addcontentsline{toc}{chapter}{Заключение}
+
+
+Главным же направлением дальнейших исследований видится развитие и усовершенствование алгоритмов работы с коллекциями документов на основе метода аннотированных суффиксных деревьев.
+
+
+\newpage
+
+\renewcommand{\bibname}{Библиографический список использованной литературы}
+\begin{thebibliography}{99}
+%\thispagestyle{empty}
+\vspace{5mm}
+\addcontentsline{toc}{chapter}{Библиографический список использованной литературы}
+
+\bibitem{pmasd}
+{\it Горяинова, Е. Р., Панков А. Р., Платонов Е. Н. Прикладные методы анализа статистических данных} / Е. Р. Горяинова., А. Р. Панков, Е. Н. Платонов -- М.: Издательский дом Высшей школы экономики, 2012. -- 310 с.
+
+\bibitem{feller}
+{\it Феллер, В. Введение в теорию вероятностей и ее приложения. Т.2.} /
+В. Феллер; пер. с англ. под ред. Ю. В. Прохорова. -- М.:
+Книжный дом <<ЛИБРОКОМ>>, 2010. -- 752 с.
+
+\bibitem{mstat}
+{\it Боровков, А. А. Математическая статистика} / А. А. Боровков. -- СПб.: Лань, 2010. -- 704 с.
+
+\bibitem{manning}
+{\it Маннинг К. Д., Рагхаван П., Шютце Х. Введение в информационный поиск} / Маннинг К. Д., Рагхаван П., Шютце Х. -- М.: Вильямс, 2011. -- 680 c.
+
+\bibitem{mp}
+{\it Шурыгин, А. М. Математические методы прогнозирования} / А. М. Шурыгин. -- М.: Телеком, 2009. -- 180 с.
+
+\bibitem{pms}
+{\it Кобзарь, А. И. Прикладная математическая статистика для инженеров и
+  научных работников} / А. И. Кобзарь. -- М.: Физматлит, 2006. -- 816 с.
+
+\bibitem{korsh}
+{\it Коршунов А, Гомзин А. Тематическое моделирование текстов на естественном языке} // Труды ИСП РАН . 2012. №. С.215-244.
+
+\bibitem{cluster}
+{\it Миркин, Б. Г. Методы кластер-анализа для поддержки принятия решений: обзор} / Б. Г. Миркин. -- М.: Издательский дом Национального исследовательского университета <<Высшая школа экономики>>, 2011 -- 84 с.
+
+\bibitem{ch1}
+{\it Черняк Е. Л., Миркин Б. Г. Использование ресурсов Интернета для построения таксономии} // В кн.: Доклады всероссийской научной конференции АИСТ 2013 / Отв. ред.: Е. Л. Черняк; науч. ред.: Д. И. Игнатов, М. Ю. Хачай, О. Баринова. М. : Национальный открытый университет <<ИНТУИТ>>, 2013. С. 36-48. 
+
+\bibitem{ch2}
+{\it Миркин Б. Г., Черняк Е. Л., Чугунова О. Н. Метод аннотированного суффиксного дерева для оценки степени вхождения строк в текстовые документы }  // Бизнес-информатика. 2012. Т. 3. № 21. С. 31-41. 
+
+\bibitem{vokov2}
+{\it  Воронцов К. В., Потапенко А. А. Модификации EM-алгоритма для вероятностного тематического моделирования } // Машинное обучение и анализ данных. -- 2013. -- T. 1, № 6. -- С. 657–686. 
+
+
+\bibitem{vokov3}
+{\it  Иванов М. Н., Воронцов К. В. Применение монотонного классификатора ближайшего соседа в задаче категоризации текстов} // Интеллектуализация обработки информации (ИОИ-2012): Докл.-- Москва: Торус Пресс, 2012. С. 621-624. 
+
+\bibitem{pub1}
+{\it М.С. Агеев. Методы автоматической рубрикации текстов, основанных на машинном обучении и знаниях экспертов} / Диссертация на соискание ученой степени к.ф.-м.н. -- М.: МГУ, 2004 
+
+\bibitem{beloz}
+{\it Гиляревский Р. С., Шапкин А. В., Белоозеров В. Н. Рубрикатор как инструмент
+информационной навигации} -- СПб.: Профессия, 2008. -- 352 с.
+
+\bibitem{dubov}
+{\it Дубов М. С., Черняк Е. Л. Аннотированные суффиксные деревья: особенности реализации} // В кн.: Доклады всероссийской научной конференции АИСТ-2013 / Отв. ред.: Е. Л. Черняк; науч. ред.: Д. И. Игнатов, М. Ю. Хачай, О. Баринова. М. : Национальный открытый университет <<ИНТУИТ>>, 2013. С. 49-57.
+
+
+\bibitem{vokov}
+{\it  Ресурсы сайта machinelearning.ru } [Электронный ресурс]. 2012 --. -- Режим доступа: {\it
+  http://www.machinelearning.ru/}, свободный. -- Загл. с экрана.
+
+\bibitem{text1}
+{\it Турдаков Д. и др. Texterra: инфраструктура для анализа текстов } // ТРУДЫ ИНСТИТУТА СИСТЕМНОГО ПРОГРАММИРОВАНИЯ РАН. -- 2014. -- Т. 26. -- №. 1.
+
+\bibitem{text2}
+{\it Велихов П. Е. Использование открытых баз данных как семантических словарей для автоматической обработки текстов: система Texterra} // Информационные процессы. – 2012. – Т. 12. – №. 3. – С. 320-329.
+
+\bibitem{ozon}
+{\it OZON.ru -- Каталог в XML } [Electronic resource]. 2009 --. -- Режим доступа: {\it
+   http://www.ozon.ru/context/partner\_xml/ }, свободный. -- Загл. с экрана.
+
+\bibitem{segalovich}
+{\it  Сегалович И. Как работают поисковые системы} // Мир Internet. -- 2002. -- Т. 10.  
+
+\bibitem{ageev}
+{\it Агеев М., Кураленок И., Некрестьянов И. Официальные метрики РОМИП-2004 } // Труды второго российского семинара по оценке методов информационного поиска. Под ред. ИС Некрестьянова-Санкт-Петербург: НИИ Химии СПбГУ. -- 2004. -- С. 142-150.
+
+\bibitem{mirkin}
+{\it Mirkin B. G., Core Concepts of Data Analysis} / B. G. Mirkin. -- Springer, 2012. -- 416 p.
+ 
+\bibitem{gensim}
+{\it  gensim: Topic modelling for humans } [Electronic resource]. 2009 --. -- Режим доступа: {\it
+  http://radimrehurek.com/gensim/ }, свободный. -- Загл. с экрана.
+
+\bibitem{thomas}
+{\it  T.K. Moon. The expectation-maximization algorithm } // IEEE Signal Processing Mag., vol. 13, pp. 47–60, Nov. 1996
+
+\bibitem{hofman}
+{\it Thomas Hofmann. Probabilistic Latent Semantic Analysis } // UAI 1999: 289-296. 
+
+\bibitem{blei}
+{\it D. Blei, A. Ng, M. Jordan. Latent Dirichlet allocation } // Journal of Machine Learning Research, 3: 993–1022, January 2003  
+
+\bibitem{gibbs}
+{\it Gregor Heinrich. Parameter estimation for text analysis} // Technical report, Fraunhofer IGD, 2005
+
+\bibitem{gibbs}
+{\it Vorontsov K. V., Potapenko A. A. Tutorial on Probabilistic Topic Modeling: Additive Regularization for Stochastic Matrix Factorization } // AIST'2014, Analysis of Images, Social networks and Texts. -- Lecture Notes in Computer Science (LNCS), Springer Verlag-Germany, 2014 (to appear). 
+
+\bibitem{bag}
+{\it Steven Bird, Ewan Klein, Edward Loper. Natural Language Processing with Python } / Steven Bird, Ewan Klein, Edward Loper -- OReilly Media, 2009 --. -- 504 p.
+
+\bibitem{s1}
+{\it Strehl A., Ghosh J., Mooney R. Impact of similarity measures on web-page clustering} // Workshop on Artificial Intelligence for Web Search (AAAI 2000). – 2000. – С. 58-64.
+
+\bibitem{s2}
+{\it Wang Y., Kitsuregawa M. Evaluating contents-link coupled web page clustering for web search results} // Proceedings of the eleventh international conference on Information and knowledge management. – ACM, 2002. – С. 499-506.
+
+\bibitem{s3}
+{\it Li T., Chen Y. Web Page Clustering Based on Searching Keywords} // Intelligent Computation Technology and Automation (ICICTA), 2010 International Conference on. – IEEE, 2010. – Т. 3. – С. 1163-1166.
+
+\bibitem{s4}
+{\it Langville A. N., Meyer C. D. Google PageRank and beyond: The science of search engine rankings} / -- Princeton University Press, 2011.
+
+\bibitem{s5}
+{\it Croft W. B., Metzler D., Strohman T. Search engines: Information retrieval in practice} -- Reading: Addison-Wesley, 2010. -- С. 283.
+
+\bibitem{s6}
+{\it Natarajan J. et al. Full-Text Search} // Pro T-SQL 2012 Programmer’s Guide. -- Apress, 2012. -- С. 287-315.
+
+\bibitem{s7}
+{\it  Pitts W. M. Full text search capabilities integrated into distributed file systems-Incrementally Indexing Files} : заяв. пат. 13/959,534 США. – 2013.
+
+\bibitem{celery}
+{\it  Celery: Distributed Task Queue } [Electronic resource]. 2013 --. -- Режим доступа: {\it
+  http://www.celeryproject.org/ }, свободный. -- Загл. с экрана.
+
+\bibitem{mongodb}
+{\it  MongoDB  } [Electronic resource]. 2013 --. -- Режим доступа: {\it
+  http://www.mongodb.org/ }, свободный. -- Загл. с экрана.
+
+%http://romip.ru/docs/romip_metrics.pdf
+
+\bibitem{vrf}
+{\it  C. J. van Rijsbergen. Information Retrieval } / Butterworth's and Co., London, U.K., 2 edition, 1979.
+
+
+\bibitem{vvv}
+{\it  Buckley C., Voorhees E. Evaluating evaluation measure stability. } /  In Proc. of the SIGIR'00, pp. 33-40, 2000. 
+
+
+\bibitem{chao}
+{\it Chao P., Bin W., Chao D. Design and Implementation of Parallel Term Contribution Algorithm Based on Mapreduce Model} // Open Cirrus Summit (OCS), 2012 Seventh. -- IEEE, 2012. -- С. 43-47.
+
+\bibitem{data}
+{\it Lin J., Dyer C. Data-intensive text processing with MapReduce} // Synthesis Lectures on Human Language Technologies. -- 2010. -- Т. 3. -- №. 1. -- С. 1-177.
+
+\bibitem{dist}
+{\it Zhou B. et al. A distributed text mining system for online web textual data analysis} // Cyber-Enabled Distributed Computing and Knowledge Discovery (CyberC), 2010 International Conference on. -- IEEE, 2010. -- С. 1-4.
+
+\bibitem{kauf}
+{\it Hwang K., Dongarra J., Fox G. C. Distributed and cloud computing: From parallel processing to the internet of things.} -- Morgan Kaufmann, 2013.
+
+\bibitem{pattt}
+{\it Altevogt P., Nitzsche R. Method of generating a distributed text index for parallel query processing }: пат. 7966332 США. -- 2011.
+
+\bibitem{nltk}
+{\it Bird S. NLTK: the natural language toolkit } // Proceedings of the COLING/ACL on Interactive presentation sessions. -- Association for Computational Linguistics, 2006. -- С. 69-72.
+
+\bibitem{ldas}
+{\it Wei X., Croft W. B. LDA-based document models for ad-hoc retrieval} // Proceedings of the 29th annual international ACM SIGIR conference on Research and development in information retrieval. -- ACM, 2006. -- С. 178-185.
+
+
+\end{thebibliography}
+
+%%%                          %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
+
+%%% Конец тела документа    %%%
+%%%                         %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
